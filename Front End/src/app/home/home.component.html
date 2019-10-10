@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <style>
+        
+                .navbar-brand{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            .navbar-brand:hover{
+               
+                border-radius: 4px;
+            }   
+            #login:hover{
+                font-weight: bold;
+            }
+            #home{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #home:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }
+            #contact{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #contact:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }
+            #about{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #about:hover{
+                background-color: rgb(204, 129, 16);
+                border-radius: 4px;
+            }
+            .Introduction{
+              height: 100px;
+              background-color: rgb(219, 189, 144);
+              font-family: 'Comfortaa', cursive;
+              font-size: 20px;
+              margin-left: 50px;
+              margin-right: 50px;
+              margin-top: 130px;
+              padding: 30px;
+              border-radius: 200px;
+            
+              text-align: center;
+              animation-name: Introduction;
+              animation-duration: 1500ms;
+            }
+            @keyframes Introduction{
+              0% {opacity: 0.1;}
+              25% {opacity: 0.25;}
+              50% {opacity: 0.5;}
+              75% {opacity: 0.75;}
+              100% {opacity: 1;}
+            }
+            .flex-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+            .second-para{
+              height: 110px;
+              margin-top: 70px;
+              margin-left: 50px;
+              margin-right: 50px;
+              font-family: 'Comfortaa', cursive;
+              font-size: 20px;
+              padding: 30px;
+              border-radius: 200px;
+              text-align: center;
+              background-color: rgb(219, 189, 144);
+              
+              margin-bottom: 10px;
+              animation-name: second-para;
+              animation-duration: 1500ms;
+            }
+            @keyframes second-para{
+              0% {opacity: 0.0;}
+              10% {opacity: 0.1;}
+              15% {opacity: 0.15;}
+              20% {opacity: 0.2;}
+              25% {opacity: 0.25;}
+              30% {opacity: 0.3;}
+              35% {opacity: 0.35;}
+              40% {opacity: 0.4;}
+              45% {opacity: 0.45;}
+              50% {opacity: 0.5;}
+              55% {opacity: 0.55;}
+              60% {opacity: 0.6;}
+              65% {opacity: 0.65;}
+              70% {opacity: 0.7;}
+              75% {opacity: 0.75;}
+              80% {opacity: 0.8;}
+              85% {opacity: 0.85;}
+              90% {opacity: 0.9;}
+              95% {opacity: 0.95;}
+              100% {opacity: 1;}
+            }
+            footer{
+    background-color: rgb(116, 58, 4);
+    color: aliceblue;
+}
+.dropdown{
+ width: 100%;
+  display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                background-color: #E39D33;
+
+}
+            </style>
+    </head>
+
+    <body style="background-image: url(/assets/wallbg.jpg);  background-repeat: no-repeat center; background-size: cover; background-attachment: fixed;">
+            <nav class="navbar sticky-top nav-masthead navbar-expand-lg navbar-light" style="background-color: #E39D33;">
+                    <a class="navbar-brand" href="#">Mentor On Demand</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="nav-link" routerLink="/home" id="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="contact">Contact Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#" id="about">About</a>
+                        </li>
+                      </ul>
+                      <ul class="navbar-nav my-2 my-lg-0">
+                            <li class="nav-item" id="Login">
+                                <a class="nav-link" routerLink="/login">Log in</a>
+                            </li>
+                      </ul>
+                    </div>
+            </nav>
+<div class="flex-container">
+            <div class="Introduction">
+              Welcome, to Mentor on Demand. Here we focus on developing individual's skillset to standout of the crowd and build a career he/she deserves. Come join us as a learner or as a mentor. 
+            </div>
+            <div class="second-para">
+              You can learn various courses from our talented mentors. Get started for free today and secure your future.
+            </div>
+</div>
+
+
+<div class="container">
+<div class="row">
+  <div class="col-sm">
+  </div>
+  <div class="col-sm">
+    <div class="dropdown">
+      <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Technologies
+      </a>
+    
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Java Full Stack</a>
+        <a class="dropdown-item" href="#">Mean Stack</a>
+        <a class="dropdown-item" href="#">Machine Learning</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm">
+  </div>
+</div>
+</div>
+    </body>
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+           MentorOnDemand
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+</html>

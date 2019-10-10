@@ -1,0 +1,88 @@
+<nav class="navbar nav-masthead navbar-expand-lg navbar-light" style="background-color: #E39D33;">
+        <a class="navbar-brand" href="#">Mentor On Demand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="about">About</a>
+            </li>
+          </ul>
+          <a routerLink="/userpage" class="profile"><img height="30px" width ="30px" src="/assets/user.png" alt="Profile"></a>
+        </div>
+    </nav>
+    
+    
+    
+    <select class="form-control" [(ngModel)]="role" (change)="usermentor()" required>
+      <option value="mentor">Mentor</option>
+      <option value="user">User</option>
+    </select>
+    
+    <div class="container1">
+        <div class="row">
+          <div class="col-0.5">
+          </div>
+          <div class="col-10">
+
+              <div id="mentortable">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Action</th>
+    
+                    </tr>
+                    <tr *ngFor= "let mentor of mentors">
+                        <td>{{mentor.firstName}}</td>
+                        <td>{{mentor.id}}</td>
+                        <td>{{mentor.userName}}</td>
+                        <td *ngIf="mentor.active"><button (click)="block1(mentor.id)" class="btn btn-danger">Block</button></td>
+                            <td *ngIf="!mentor.active"><button (click)="unblock1(mentor.id)" class="btn btn-success">Unblock</button></td>
+                    </tr>
+                </table> 
+              </div>
+                <div id="usertable">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>Action</th>
+        
+                        </tr>
+                        <tr *ngFor= "let user of users">
+                            <td>{{user.firstName}}</td>
+                            <td>{{user.id}}</td>
+                            <td>{{user.userName}}</td>
+                            <td *ngIf="user.active"><button (click)="block(user.id)" class="btn btn-danger">Block</button></td>
+                            <td *ngIf="!user.active"><button (click)="unblock(user.id)" class="btn btn-success">Unblock</button></td>
+                        </tr>
+                    </table>
+                </div>
+    
+          </div>
+          <div class="col-1.5">
+          </div>
+        </div>
+    </div>
+    
+    
+    <footer class="page-footer font-small blue">
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+           MentorOnDemand
+        </div>
+        <!-- Copyright -->
+      
+      </footer>

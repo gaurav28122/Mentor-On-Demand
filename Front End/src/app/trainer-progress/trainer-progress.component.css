@@ -1,0 +1,62 @@
+footer{
+    background-color: rgb(116, 58, 4);
+    color: aliceblue;
+    margin-top: 120px;
+}
+
+#home{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+#home:hover{
+    background-color: rgb(197, 135, 43);
+    border-radius: 4px;
+}
+#contact{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+#contact:hover{
+    background-color: rgb(197, 135, 43);
+    border-radius: 4px;
+}
+#about{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+#about:hover{
+    background-color: rgb(204, 129, 16);
+    border-radius: 4px;
+}
+/* Table css started */
+th,td{
+    border-bottom: 1px solid white;
+    width: 33%;
+}
+th{
+    height: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+td{
+    padding: 15px;
+}
+
+table{
+    background-color: rgb(56, 52, 52);
+    color: white;
+    margin-top: 130px;
+    margin-bottom: 30px;
+    height: 30vh;
+    width: 60vw;
+    text-align: center;
+    
+}
+.container1{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+/* Table css ended */

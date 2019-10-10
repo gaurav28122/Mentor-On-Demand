@@ -1,0 +1,88 @@
+<nav class="navbar nav-masthead navbar-expand-lg navbar-light" style="background-color: #E39D33;">
+        <a class="navbar-brand" href="#">Mentor On Demand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="about">About</a>
+            </li>
+          </ul>
+          <a routerLink="/userpage" class="profile"><img height="30px" width ="30px" src="/assets/user.png" alt="Profile"></a>
+        </div>
+    </nav>
+    
+    
+   
+    <div class="container1">
+    <div class="row">
+      <div class="col-0">
+      </div>
+      <div class="col-8">
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Price</th>
+                    <th>Edit</th>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Rs 2000</td>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Rs 800</td>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                </tr>
+                
+
+            </table> 
+            
+      </div>
+      <div class="col-4">
+      </div>
+    </div>
+</div>
+
+<form>
+        <div class="form-row">
+          <div class="col">
+                <input type="text" name="Technology" [(ngModel)]="technology.techName" class="form-control" placeholder="Technology">
+            </div>
+            <div class="col">
+                <input type="text" name="Price" [(ngModel)]="technology.price"class="form-control" placeholder="Price">
+            </div>
+        </div><br>
+        <div class="form-row">
+            <div class="col">
+                  <input type="text" name="Duration" [(ngModel)]="technology.duration"class="form-control" placeholder="Duration">
+              </div>
+              <div class="col">
+                  <input type="text" name="Remarks" [(ngModel)]="technology.remarks"class="form-control" placeholder="Remarks">
+              </div>
+          </div>
+      </form>
+
+<div class="add-btn">
+        <button type="submit" (click)="create()" id ="submit" class="btn btn-primary btnbtn">Add New Technology</button>
+    </div>
+
+
+    <footer class="page-footer font-small blue">
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+           MentorOnDemand
+        </div>
+        <!-- Copyright -->
+      
+      </footer>

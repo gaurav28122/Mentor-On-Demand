@@ -1,0 +1,40 @@
+<nav class="navbar nav-masthead navbar-expand-lg navbar-light" style="background-color: #E39D33;">
+    <a class="navbar-brand" href="#">Mentor On Demand</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="about">About</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<div class="user-welcome" id="displayName">Hi, John Doe</div>
+<div class="container-flex">
+<div class="progress-button" class="button-1"><button type="button" class="btn btn-primary">Requests</button></div>
+<div class="progress-button" class="button-2"><button type="button" class="btn btn-primary">Current Progress</button></div>
+<div class="progress-button" class="button-3"><button type="button" class="btn btn-primary" routerLink="/completed-training-mentor">Completed Trainings</button></div>
+<div class="progress-button" class="button-4"><button type="button" class="btn btn-primary">Edit Skills</button></div>
+<div class="progress-button" class="button-5"><button type="button" class="btn btn-primary">Payments</button></div>
+<div class="progress-button" class="button-6"><button type="button" class="btn btn-danger" (click)="logout()" routerLink="/login">Logout</button></div>
+</div>
+
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+       MentorOnDemand
+    </div>
+    <!-- Copyright -->
+  
+  </footer>

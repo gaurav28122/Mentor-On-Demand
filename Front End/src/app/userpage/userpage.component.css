@@ -1,0 +1,78 @@
+.user-welcome{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(1, 14, 24);
+    position: relative;
+    animation-name: welcome;
+    animation-duration: 1s;
+}
+@keyframes welcome{
+    0% {left:0px; top:70px;}
+    100% {left:0px; top:0px}
+}
+
+button{
+    background-color: rgb(230, 142, 53);
+    border-color: #E68E35;
+    width: 30vw;
+    margin-bottom: 20px;
+}
+.btn-primary:hover{
+    background-color: rgb(190, 104, 18);
+    border-color:rgb(190, 104, 18);
+}
+
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 50vh;
+}
+
+.button-1{
+ animation-name: button-1;
+ 
+ position: relative;
+ animation-duration: 1s;
+}
+@keyframes button-1{
+    0% {left:0px; top:100px;}
+    100% {left:0px; top:0px}
+}
+.button-2{
+    animation-name: button-2;
+    
+    animation-duration: 1s;
+    position: relative;
+}
+@keyframes button-2{
+    0% {left:0px; top:130px;}
+    100% {left:0px; top:0px}
+}
+.button-3{
+    animation-name: button-3;
+    
+    animation-duration: 1s;
+    position: relative;
+}@keyframes button-3{
+    0% {left:0px; top:160px;}
+    100% {left:0px; top:0px}
+}
+.button-4{
+    animation-name: button-4;
+    
+    animation-duration: 1s;
+    position: relative;
+}
+@keyframes button-4{
+    0% {left:0px; top:190px;}
+    100% {left:0px; top:0px}
+}
+footer{
+    background-color: rgb(116, 58, 4);
+    color: aliceblue;
+    margin-top: 120px;
+}

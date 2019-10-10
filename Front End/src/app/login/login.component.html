@@ -1,0 +1,178 @@
+<html>
+<head>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<style>
+#firstpara{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    margin-top: 155px;
+    color: #6B440A;
+}
+
+body{
+    height: 100vh;
+    background-image: url(/assets/wallbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat center;
+}
+
+#username{
+    width: 100%;
+    border-radius: 4px;
+    display: inline-block;
+}
+.col-sm-6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#password{
+ width: 50%;
+ border-radius: 4px;
+ display: inline-block;
+ box-sizing: border-box;
+}
+
+#submit{
+    width: 100%;
+    border-radius: 4px;
+    background-color:#E68E35;
+    border-color: #E68E35;
+    font-weight: bold;
+}
+#submit:hover{
+background-color: #B76D22;
+border-color: #B76D22;
+}
+#forgot{
+    font-size: 90%;
+}
+#new{
+    font-size: 70%;
+}
+.navbar-brand{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            .navbar-brand:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }   
+            #login:hover{
+                font-weight: bold;
+            }
+            #home{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #home:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }
+            #link{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #link:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }
+            #disabled{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #disabled:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }
+
+            footer{
+                margin-top: 50px;
+    background-color: rgb(116, 58, 4);
+    color: aliceblue;
+}
+</style>
+</head>
+
+<body>
+
+<!--nav bar start-->
+<nav class="navbar nav-masthead navbar-expand-lg navbar-light" style="background-color: #E39D33;">
+        <a class="navbar-brand" href="#">Mentor On Demand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link" routerLink="/home" id="home">Home</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="#" id="contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="about">About</a>
+            </li>
+          </ul>
+         
+        </div>
+</nav>
+      
+<!--nav bar end-->
+
+<div class= "row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+        <p id="firstpara">Hey, Welcome</p>
+        <form method="POST">
+            <div class="form-group">
+            <input type="text" name="userName" [(ngModel)]="userName" id="username" placeholder="Username.." class="form-control"><br>
+            </div>
+            <div class="form-group">
+            <div class="input-group  mb-3">
+            <input #x type="password" name="password" [(ngModel)]="password" id="password" placeholder="Password.." class="form-control">
+            <div id="icon" class="input-group-append">
+                <span class="add-on btn btn-warning" (click)="x.type=x.type=='password'?'text':'password'; y.className=y.className=='fa fa-eye'?'fa fa-eye-slash':'fa fa-eye'"><i #y class="fa fa-eye"></i></span> 
+              </div>
+            </div>
+            </div>
+            <select [(ngModel)]="role" name="dropdown" class="form-control" required>
+                    <option [ngValue]="undefined" hidden selected disabled><p class="text-muted">Login Type</p></option>
+                    <option value="User" [ngValue]="User">User</option>
+                    <option value="Mentor" [ngValue]="Mentor">Mentor</option>
+                    <option value="Admin" [ngValue]="Admin">Admin</option>
+                  </select><br>
+            <div class="form-group">
+            <button type="submit" (click)="check()" id ="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+        <p id="forgot"><a href="first example.html">Forgot Password?</a></p>
+        <p id="new"><a routerLink="/signup">New Around Here?</a></p>
+        
+    </div>
+    <div class="col-sm-3"></div>
+    
+</div>
+
+
+</body>
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+       MentorOnDemand
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+</html>

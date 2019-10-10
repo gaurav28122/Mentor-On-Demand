@@ -1,0 +1,74 @@
+footer{
+    background-color: rgb(116, 58, 4);
+    color: aliceblue;
+    margin-top: 120px;
+}
+#home{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+#home:hover{
+    background-color: rgb(197, 135, 43);
+    border-radius: 4px;
+}
+#contact{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+#contact:hover{
+    background-color: rgb(197, 135, 43);
+    border-radius: 4px;
+}
+#about{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+#about:hover{
+    background-color: rgb(204, 129, 16);
+    border-radius: 4px;
+}
+
+select{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+td{
+    border-bottom: 1px solid white;
+    width: 50%;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+th{
+    padding: 15px;
+}
+th,td{
+    border-bottom: 1px solid white;
+    width: 25%;
+}
+table{
+    background-color: rgba(56, 52, 52, 0.74);
+    color: white;
+    height: 30vh;
+    width: 50vw;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+#usertable{
+    display: none;
+}
+#mentortable{
+    display: none;
+}

@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+
+        <style>
+            .flex-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 90vh;
+            }
+            body{
+                height: 100vh;
+                background-image: url(/assets/wallbg.jpg);
+                background-repeat: no-repeat center;
+                background-size: cover;
+            }
+            .form-row{
+                margin-top: 110px;
+            }
+            /* .input-group{
+                margin-bottom: 25px !important;
+            } */
+            #email{
+                margin-top: 25px;
+            }
+            #linkedinUrl{
+                margin-top: 25px;
+            }
+            
+            #confirm-password{
+                margin-top: 25px;
+            }
+            #role{
+                margin-top: 25px;
+            }
+            #submit{
+                width: 100%;
+                font-size: 20px; 
+                border-radius: 4px;
+                background-color: #E68E35;
+                border-color: #E68E35;
+            }
+            #submit:hover {
+                background-color: #B76D22;
+                border-color: #B76D22;
+            }
+            .navbar-brand{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            .navbar-brand:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }   
+            #login:hover{
+                font-weight: bold;
+            }
+            #home{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #home:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }
+            #link{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #link:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }
+            #disabled{
+                padding-right: 4px;
+                padding-left: 4px;
+            }
+            #disabled:hover{
+                background-color: rgb(197, 135, 43);
+                border-radius: 4px;
+            }
+            footer{
+                margin-top: 140px;
+                background-color: rgb(116, 58, 4);
+                color: aliceblue;
+            }
+            #space{
+                margin-right: 70px;
+                margin-bottom: 10px;
+            }
+            form{
+                width: 350px;
+            }
+            #msg1,#msg2,#msg3,#msg4{
+                color: red;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+            <nav class="navbar nav-masthead navbar-expand-lg navbar-light" style="background-color: #E39D33; margin-bottom: 40px;">
+                    <a class="navbar-brand" href="#">Mentor On Demand</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#" id="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="#" id="contact">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#" id="about">About</a>
+                        </li>
+                      </ul>
+                    </div>
+            </nav>
+        <div class="flex-container"> 
+            <form method="POST">
+                    <div class="form-group">
+                            <div class="form-row" >
+                                    <div class="col">
+                                      <input type="text" name="firstName"[(ngModel)]="user.firstName"(change)="firstName()" class="form-control" placeholder="First name"><span id="msg1"></span>
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" name="lastName"[(ngModel)]="user.lastName" (change)="lastName()"class="form-control" placeholder="Last name"><span id="msg2"></span><br>
+                                    </div>
+
+                            </div>
+
+                            <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="basic-addon1">+91</span>
+                                    </div>
+                                <input type="tel" name="contactNumber"[(ngModel)]="user.contactNumber" (change)="contact()"id="tel" placeholder="Contact No." class="form-control">
+                                
+                            </div>
+                            <span id="msg3"></span>
+                            <input type="email" name="email" [(ngModel)]="user.userName" (change)="validateEmail()"id="email" placeholder="Email.." class="form-control"><span id="msg4"></span>
+                            
+                            <input type="text" name="linkedinUrl" [(ngModel)]="user.linkedinUrl" id="linkedinUrl" placeholder="LinkedIn URL.." class="form-control"><br>
+
+                            <input type="number" name="yearsOfExperience"[(ngModel)]="user.yearsOfExperience" id="yearsOfExperience" placeholder="Years of Experience.." class="form-control"><br>
+
+                            <input type="password" name="password"[(ngModel)]="user.password" id="password" placeholder="Password.." class="form-control"><input type="password" id="confirm-password" placeholder="Confirm Password.." class="form-control">
+                            
+                            <select class="form-control" id="role" name="role" onchange="hideShow('mentor', this)" [(ngModel)]="role" required autofocus>
+                                    <option [ngValue]="undefined" disabled  selected>Choose Role...</option>
+                                    <option value="MENTOR" [ngValue]="MENTOR">Mentor</option>
+                                    <option value="USER" [ngValue]="USER">User</option>
+                                </select><br>
+
+                            <button type="submit" (click)="create()" id ="submit" class="btn btn-primary">Sign Up</button>
+                            <p id="old"><a routerLink="/login">Already have an account?</a></p>
+                    </div>
+
+            </form>
+            
+
+        </div>
+
+        <footer class="page-footer font-small blue">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+               MentorOnDemand
+            </div>
+            <!-- Copyright -->
+          
+          </footer>
+    </body>
+</html>
